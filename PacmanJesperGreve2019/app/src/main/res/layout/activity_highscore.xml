@@ -13,6 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:background="@color/colorPrimary"
         android:orientation="horizontal">
 
         <TextView
@@ -21,19 +22,22 @@
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
             android:layout_weight="5"
-            android:gravity="center_horizontal"
-            android:text="@string/Highscore"
+            android:gravity="center|center_horizontal"
+            android:text="@string/HighscoreTitle"
             android:textAlignment="center"
-            android:textSize="18sp" />
+            android:textColor="@android:color/background_light"
+            android:textSize="30sp" />
 
         <Button
             android:id="@+id/BackButton"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="10"
+            android:background="@color/colorPrimaryDark"
             android:onClick="MainMenu"
             android:text="@string/HighScore_Back"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textColor="@android:color/background_light" />
     </LinearLayout>
 
     <ScrollView
@@ -41,13 +45,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="10"
+        android:background="@color/colorPrimary"
         android:scrollbarStyle="insideInset">
 
         <LinearLayout
             android:id="@+id/VerticalLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"/>
+            android:background="@color/colorPrimary"
+            android:orientation="vertical" />
     </ScrollView>
 
 </LinearLayout>

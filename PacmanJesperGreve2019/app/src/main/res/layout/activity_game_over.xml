@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     tools:context=".GameOver">
 
     <EditText
@@ -19,6 +20,7 @@
         android:inputType="textPersonName"
         android:text="Name"
         android:textAlignment="center"
+        android:textColor="@android:color/background_light"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/score"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,8 +34,10 @@
         android:layout_marginStart="64dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="64dp"
+        android:gravity="center|center_horizontal"
         android:text="Score"
         android:textAlignment="center"
+        android:textColor="@android:color/background_light"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/submitButton"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,8 +52,10 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="128dp"
         android:layout_marginBottom="64dp"
+        android:background="@color/colorPrimaryDark"
         android:onClick="SubmitButton"
         android:text="Submit to Highscore"
+        android:textColor="@android:color/background_light"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

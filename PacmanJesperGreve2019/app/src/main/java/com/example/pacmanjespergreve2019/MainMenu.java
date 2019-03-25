@@ -69,7 +69,6 @@ public class MainMenu extends AppCompatActivity
         Snackbar snackbar = Snackbar.make(v,message,Snackbar.LENGTH_LONG);
         snackbar.getView().findViewById(android.support.design.R.id.snackbar_text).setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
         snackbar.show();
-        //finish();
     }
 
     public void ViewSettings()

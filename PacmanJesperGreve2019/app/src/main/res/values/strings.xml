@@ -2,7 +2,8 @@
     <string name="app_name">PacmanJesperGreve2019</string>
     <string name="GameTitle">Fish Game</string>
     <string name="Play">Play</string>
-    <string name="Highscore">Highscore Top 100</string>
+    <string name="HighscoreTitle">Local Highscore Top 100</string>
+    <string name="ToHighscore">Highscore</string>
     <string name="Score">Score</string>
     <string name="action_settings">Settings</string>
     <string name="HighScore_Back">Main Menu</string>

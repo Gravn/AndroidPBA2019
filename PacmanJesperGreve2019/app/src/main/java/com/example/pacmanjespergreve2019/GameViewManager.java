@@ -24,7 +24,7 @@ public class GameViewManager<Sprite> extends View
     private Display display;
     private Point displaySize = new Point();
 
-    public static boolean debugging = true;
+    public static boolean debugging = false;
     public static float score = 0;
     public static int lives = 3;
     private Bitmap lives_alive, lives_dead;
