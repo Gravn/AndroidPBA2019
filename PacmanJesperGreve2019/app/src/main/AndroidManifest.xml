@@ -9,14 +9,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GameOver">
-
+        <activity
+            android:name=".HighscoreActivity"
+            android:screenOrientation="landscape"
+            android:parentActivityName=".MainMenu">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.pacmanjespergreve2019.MainMenu" />
         </activity>
-        <activity android:name=".GameActivity" />
-        <activity android:name=".MainMenu">
+        <activity
+            android:name=".GameOver"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".GameActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.pacmanjespergreve2019.MainMenu" />
+        </activity>
+        <activity
+            android:name=".MainMenu"
+            android:screenOrientation="landscape">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>

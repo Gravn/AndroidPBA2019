@@ -19,17 +19,18 @@ public abstract class GameObject
     Context context;
     Rect spriteRect;
     RectF objectRect;
+    public int layer;
+    public PointF speed = new PointF(0,0);
 
-
-    public GameObject(int spriteID, float xPos, float yPos, float width, float height, Context context )
+    public GameObject(int spriteID, float xPos, float yPos, int layer, float width, float height, Context context )
     {
         this.context = context;
         this.position = new PointF(xPos,yPos);
+        this.layer = layer;
         this.size = new PointF(width,height);
         sprite = BitmapFactory.decodeResource(context.getResources(),spriteID);
         this.spriteRect = new Rect(0,0,sprite.getWidth(),sprite.getHeight());
         this.objectRect = new RectF(xPos,yPos,width,height);
-
     }
 
     protected RectF getCollisionRect()
@@ -42,12 +43,18 @@ public abstract class GameObject
         this.sprite = BitmapFactory.decodeResource(context.getResources(),spriteID);
     }
 
+    protected void Update(float deltaTime)
+    {
+        this.position.x += speed.x;
+        this.position.y += speed.y;
+    }
+
     protected void Draw(Canvas canvas)
     {
         this.objectRect = new RectF(position.x,position.y,position.x+size.x,position.y+size.y);
 
         canvas.drawBitmap(sprite,spriteRect,objectRect,null);
-        canvas.drawBitmap(sprite,position.x,position.y,null);
+        //canvas.drawBitmap(sprite,position.x,position.y,null);
 
         if(GameViewManager.debugging)
         {
@@ -57,11 +64,6 @@ public abstract class GameObject
 
             canvas.drawRect(getCollisionRect(), p);
         }
-    }
-
-    protected void Update(float deltaTime)
-    {
-
     }
 
     protected void Destroy(GameObject go)
